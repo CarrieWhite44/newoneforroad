@@ -14,11 +14,18 @@
     </style>
   </head>
   <body>
+    {% include 'nav.html' %}
+    <img class="img-fluid" id="banner" src="static/photograph.jpg" height=320>
     <div class="container">
-      <h1 class="text-center mt-2 mb-4"> {{company_name}} Take a Look at this</h1>
-     <img class="img-fluid" id="banner" src="static/photograph.jpg" height=320>
      <h2 class="text-center">About The company</h2>
-    <p class="lead">A lot of text just so it looks like a lot of text. this is just an exmaple so it doesn't really matter to anyone what is writeentn but I want ti to look nice so I am texting a lot of letters</p>
+    <div class="row">
+      <div class="col-md-6">
+      <p class="lead">A lot of text just so it looks like a lot of text. this is just an exmaple so it doesn't really matter to anyone what is writeentn but I want ti to look nice so I am texting a lot of letters</p>
+      </div>
+      <div class="d-none d-md-block col-md-6">
+      <img src="static/newjob.jpg" style="height:320px">
+      </div>
+    </div>
     <h2 class="text-center mt-2 mb-4"">Open Positions</h2>
     <div>
       {% for job in jobs %}
@@ -28,6 +35,7 @@
       <div class="text-center">
         <button class="btn btn-primary"> Contatc us </button>
          <p class="lead">Copywrite 2023, Carrie</p>
+      {% include 'footer.html' %}
       </div>
     </div>
      
